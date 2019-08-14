@@ -9,12 +9,14 @@ solution, but project structuring, choosen architecture, naming conventions
 and how the project grows over time as seen in your commit history.
 
 
-The project can be found at `https://gitlab.fairphone.software/assignments/RssAndroidAppKotlin`
+The project can be found at `https://gitlab.com/fairphone/rss-android-app.git`
 
 
 Please fork the project in gitlab, and then clone it from the fork using the following command:
 `git clone git@gitlab.fairphone.software:YOUR_USERNAME/RssAndroidApp.git`
 
+Or create a new branch with the following name:
+`assignment/[YOUR_USERNAME]` and push all your changes to that branch
 
 ## Rss feed
 * Fetch the rss feed from `https://www.fairphone.com/en/feed/`.
