@@ -5,7 +5,7 @@ We recommend spending about four to six hours on the assignment, but you can tak
 
 
 Please do not feel too stressed to complete all items. Assessment does not just include your
-solution, but project structuring, choosen architecture, naming conventions 
+solution, but project structuring, chosen architecture, naming conventions 
 and how the project grows over time as seen in your commit history.
 
 

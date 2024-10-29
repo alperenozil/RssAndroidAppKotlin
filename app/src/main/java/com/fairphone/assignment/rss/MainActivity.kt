@@ -16,12 +16,31 @@
 package com.fairphone.assignment.rss
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 
-class RssHomeActivity : AppCompatActivity() {
+class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_rss_home)
+        setContent {
+            MainScreen()
+        }
     }
+}
+
+@Composable
+fun MainScreen() {
+    Box(Modifier.fillMaxSize())
+}
+
+@Composable
+@Preview
+fun MainScreen_Preview() {
+    MainScreen()
 }
