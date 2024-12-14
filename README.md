@@ -1,39 +1,40 @@
-# Fairphone RSS assignment
+# Fairphone RSS Reader
 
+This is an Android application built with Kotlin that fetches and displays RSS feeds from the Fairphone website.
 
-We recommend spending about four to six hours on the assignment, but you can take the time you need.
+## About
 
+This project was created as part of a Fairphone assignment. It demonstrates the use of modern Android development practices, including Jetpack Compose, Coroutines, and Hilt.
 
-Please do not feel too stressed to complete all items. Assessment does not just include your
-solution, but project structuring, chosen architecture, naming conventions 
-and how the project grows over time as seen in your commit history.
+## Features
 
+*   Fetches RSS feed from `https://www.fairphone.com/en/feed/`
+*   Parses the feed into news items
+*   Displays item headers as a list
+*   Allows viewing the full text of news items
+*   Allows opening linked URLs in a web browser
+*   Supports marking items as read
+*   Supports sharing news items
 
-The project can be found at `https://gitlab.com/fairphone/rss-android-app-kotlin.git`
+## Architecture
 
+The project follows a clean architecture approach, with separate layers for presentation, domain, and data.
 
-Please clone the repository from gitlab using the following command:
-`git clone git@gitlab.com:fairphone/rss-android-app-kotlin.git`
+*   **Presentation:** Uses Jetpack Compose for building the UI.
+*   **Domain:** Contains use cases and business logic.
+*   **Data:** Handles data access from remote and local sources.
 
-Then create a new branch with the following name:
-`assignment/alperenozil1` and push all your changes to that branch
+## Dependencies
 
-## Rss feed
-* Fetch the rss feed from `https://www.fairphone.com/en/feed/`.
-* Parse into news items
-* Display item headers as a list.
+The project uses the following key dependencies:
 
+*   Jetpack Compose
+*   Coroutines
+*   Hilt
+*   Retrofit
+*   Room
+*   OkHttp
 
-## News items
-* View the full text of the items.
-* View linked URLs.
+## Testing
 
-
-## Extras
-* Tests
-* Eye candy (Animations, transitions, theming etc.)
-* Marking items as read.
-* Sharing news items.
-* Opening items in WebView.
-* Offline support.
-* Any other cool ideas.
+The project includes unit tests for use cases, repositories, and ViewModels. It also includes UI tests using Paparazzi for screenshot testing.
