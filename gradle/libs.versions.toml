@@ -16,11 +16,15 @@ androidx-room = "2.6.1"
 androidx-work = "2.9.0"
 koin = "3.5.6"
 retrofit = "2.11.0"
+gson = "2.11.0"
+hilt = "2.51.1"
+tik = "0.8.15"
 
 # Test libs
 junit = "4.13.2"
 androidx-test = "1.5.0"
 androidx-test-ext-junit = "1.1.4"
+junit-version = "4.12"
 
 
 [libraries]
@@ -67,10 +71,15 @@ kotlinx-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core",
 kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization-json" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "gson" }
+tik = { module = "com.tickaroo.tikxml:tikxml", version.ref = "tik" }
 retrofit-kotlinx-serialization-converter = { module = "com.squareup.retrofit2:converter-kotlinx-serialization", version.ref = "retrofit" }
+junit-junit = { group = "junit", name = "junit", version.ref = "junit-version" }
+
 
 
 [plugins]
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
