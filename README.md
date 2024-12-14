@@ -2,6 +2,8 @@
 
 This is an Android application built with Kotlin that fetches and displays RSS feeds from the Fairphone website.
 
+Click for demo -> https://streamable.com/kybsko
+
 ## About
 
 This project was created as part of a Fairphone assignment. It demonstrates the use of modern Android development practices, including Jetpack Compose, Coroutines, and Hilt.
