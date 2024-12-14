@@ -16,7 +16,7 @@ Please clone the repository from gitlab using the following command:
 `git clone git@gitlab.com:fairphone/rss-android-app-kotlin.git`
 
 Then create a new branch with the following name:
-`assignment/[YOUR_USERNAME]` and push all your changes to that branch
+`assignment/alperenozil1` and push all your changes to that branch
 
 ## Rss feed
 * Fetch the rss feed from `https://www.fairphone.com/en/feed/`.
