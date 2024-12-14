@@ -18,14 +18,23 @@ package com.fairphone.assignment.rss
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.hilt.navigation.compose.hiltViewModel
+import com.fairphone.assignment.rss.ui.FeedViewModel
+import com.fairphone.assignment.rss.ui.composable.ListItem
+import com.fairphone.assignment.rss.ui.composable.WebViewPage
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -35,8 +44,25 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun MainScreen() {
-    Box(Modifier.fillMaxSize())
+fun MainScreen(viewModel : FeedViewModel = hiltViewModel()) {
+    val state = viewModel.feedState.collectAsState()
+    val urlState = viewModel.urlState.collectAsState()
+    Column(Modifier.fillMaxSize()) {
+        LazyColumn(Modifier.fillMaxSize()) {
+            state.value.items?.let { list ->
+                items(list) { item ->
+                    ListItem(item, viewModel::setUrl)
+                }
+            }
+        }
+        if(state.value.error?.isNotBlank() == true){
+            Text("Error!")
+        }
+        if(state.value.isLoading == true){
+            Text("Loading...")
+        }
+    }
+    if(urlState.value.length>0) WebViewPage(urlState.value)
 }
 
 @Composable
